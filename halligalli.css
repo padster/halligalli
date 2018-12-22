@@ -1,0 +1,159 @@
+:root {
+  --imageSize: 8vh;
+  --cardWidth: calc(var(--imageSize) * 3);
+  --cardHeight: calc(var(--imageSize) * 4);
+  --pad: calc(var(--imageSize) * 4);
+}
+
+html, body, #cards {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: navy;
+}
+
+#cards {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  width: var(--cardWidth);
+  height: var(--cardHeight);
+
+  background-color: white;
+  border: 3px solid black;
+}
+
+.card.active {
+  border-color: #FF9200;
+}
+
+.card.n0 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cardInner {
+  position: relative;
+  margin: 25px;
+
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+}
+
+.midHolder {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.pic {
+  display: none;
+  position: absolute;
+
+  width: var(--imageSize);
+  height: var(--imageSize);
+
+  background-size: cover;
+}
+
+.lime .pic {
+  background-image: url('lime375.jpg');
+}
+
+.plum .pic {
+  background-image: url('plum375.jpg');
+}
+
+.banana .pic {
+  background-image: url('banana375.jpg');
+}
+
+.strawberry .pic {
+  background-image: url('strawberry375.jpg');
+}
+
+.p1 {
+  top: 0;
+  left: 0;
+}
+
+.p2 {
+  top: 0;
+  right: 0;
+}
+
+.p3 {
+  align-self: center;
+}
+
+.p4 {
+  bottom: 0;
+  left: 0;
+}
+
+.p5 {
+  bottom: 0;
+  right: 0;
+}
+
+.n1 .p3,
+.n2 .p1, .n2 .p5,
+.n3 .p1, .n3 .p3, .n3 .p5,
+.n4 .p1, .n4 .p2, .n4 .p4, .n4 .p5,
+.n5 .pic {
+  display: block;
+}
+
+#cards .card:nth-child(1) {
+  transform: rotate(90deg) translate(var(--pad)) rotate(-90deg);
+}
+
+.cards2 .card:nth-child(2) { transform: rotate(270deg) translate(var(--pad)) rotate(-90deg); }
+.cards3 .card:nth-child(2) { transform: rotate(210deg) translate(var(--pad)) rotate(-90deg); }
+.cards3 .card:nth-child(3) { transform: rotate(330deg) translate(var(--pad)) rotate(-90deg); }
+.cards4 .card:nth-child(2) { transform: rotate(180deg) translate(var(--pad)) rotate(-90deg); }
+.cards4 .card:nth-child(3) { transform: rotate(270deg) translate(var(--pad)) rotate(-90deg); }
+.cards4 .card:nth-child(4) { transform: rotate(  0deg) translate(var(--pad)) rotate(-90deg); }
+.cards5 .card:nth-child(2) { transform: rotate(162deg) translate(var(--pad)) rotate(-90deg); }
+.cards5 .card:nth-child(3) { transform: rotate(234deg) translate(var(--pad)) rotate(-90deg); }
+.cards5 .card:nth-child(4) { transform: rotate(306deg) translate(var(--pad)) rotate(-90deg); }
+.cards5 .card:nth-child(5) { transform: rotate( 18deg) translate(var(--pad)) rotate(-90deg); }
+.cards6 .card:nth-child(2) { transform: rotate(150deg) translate(var(--pad)) rotate(-90deg); }
+.cards6 .card:nth-child(3) { transform: rotate(210deg) translate(var(--pad)) rotate(-90deg); }
+.cards6 .card:nth-child(4) { transform: rotate(270deg) translate(var(--pad)) rotate(-90deg); }
+.cards6 .card:nth-child(5) { transform: rotate(330deg) translate(var(--pad)) rotate(-90deg); }
+.cards6 .card:nth-child(6) { transform: rotate( 30deg) translate(var(--pad)) rotate(-90deg); }
+
+
+/* Options overlay. */
+#options {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  color: white;
+}
+
+#options > table {
+  width: 100%;
+}
+
+#options > div {
+  display: flex;
+  font-weight: bold;
+}
+
+#cardCount {
+  padding-left: 10px;
+}

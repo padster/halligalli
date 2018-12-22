@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Halli Galli training</title>
+  <link rel="stylesheet" href="./halligalli.css"></link>
+  <script src="./halligalli.js"></script>
+</head>
+
+<body onkeypress="handleKeyPress(event)" onload="updateNCards()">
+
+  <div id="cards">
+  </div>
+
+  <div id="options">
+    <table>
+      <tr><td>Correct</td><td id="nTP"></td></tr>
+      <tr><td>Av. Time</td><td id="tpAv"></td></tr>
+      <tr><td>Wrong</td><td id="nFP"></td></tr>
+      <tr><td>Missed</td><td id="nFN"></td></tr>
+    </table>
+    <div>
+      <input id="nCards" type="range" value="4" min="2" max="6" onchange="updateNCards()"></input>
+      <span id="cardCount"></span>
+    </div>
+  </div>
+
+
+</body>
+
+
+</html>
