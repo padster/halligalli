@@ -121,9 +121,11 @@ function checkForMatch(active) {
 
 function handleKeyPress(e) {
   if (e.keyCode == 32) {
-    checkForMatch(true);
-  } else if (e.keyCode == 13) {
+    // Space
     dealCard();
+  } else if (e.keyCode == 13) {
+    // Enter
+    checkForMatch(true);
   }
 }
 

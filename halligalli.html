@@ -13,16 +13,21 @@
   </div>
 
   <div id="options">
+    <div>
+      <input id="nCards" type="range" value="4" min="2" max="6" onchange="updateNCards()"></input>
+      <span id="cardCount"></span>
+    </div>
+    <div><strong>Keys:</strong></div>
+    <ul>
+      <li>Space: deal a card</li>
+      <li>Enter: hit the bell</li>
+    </ul>
     <table>
       <tr><td>Correct</td><td id="nTP"></td></tr>
       <tr><td>Av. Time</td><td id="tpAv"></td></tr>
       <tr><td>Wrong</td><td id="nFP"></td></tr>
       <tr><td>Missed</td><td id="nFN"></td></tr>
     </table>
-    <div>
-      <input id="nCards" type="range" value="4" min="2" max="6" onchange="updateNCards()"></input>
-      <span id="cardCount"></span>
-    </div>
   </div>
 
 

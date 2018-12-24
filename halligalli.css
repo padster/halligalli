@@ -1,8 +1,8 @@
 :root {
-  --imageSize: 8vh;
+  --imageSize: 7vh;
   --cardWidth: calc(var(--imageSize) * 3);
   --cardHeight: calc(var(--imageSize) * 4);
-  --pad: calc(var(--imageSize) * 4);
+  --pad: calc(var(--imageSize) * 5);
 }
 
 html, body, #cards {
