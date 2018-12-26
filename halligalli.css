@@ -132,6 +132,37 @@ html, body, #cards {
 .cards6 .card:nth-child(5) { transform: rotate(330deg) translate(var(--pad)) rotate(-90deg); }
 .cards6 .card:nth-child(6) { transform: rotate( 30deg) translate(var(--pad)) rotate(-90deg); }
 
+/* Button overlay. */
+#buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+}
+
+.button {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid white;
+  margin-top: 12px;
+}
+.button:first-child {
+  margin-top: 0px;
+}
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 /* Options overlay. */
 #options {
