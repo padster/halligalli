@@ -1,9 +1,31 @@
 :root {
   --imageSize: 7vh;
+  --cardMargin: 25px;
   --cardWidth: calc(var(--imageSize) * 3);
   --cardHeight: calc(var(--imageSize) * 4);
   --pad: calc(var(--imageSize) * 5);
 }
+
+@media only screen and (max-width: 480px) and (max-height: 1000px) and (orientation: portrait) {
+  :root {
+    --imageSize: 3.8vh;
+    --cardMargin: 12px;
+    --cardWidth: calc(var(--imageSize) * 3);
+    --cardHeight: calc(var(--imageSize) * 4);
+    --pad: calc(var(--imageSize) * 4);
+  }
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 480px) and (orientation: landscape) {
+  :root {
+    --imageSize: 7vh;
+    --cardMargin: 12px;
+    --cardWidth: calc(var(--imageSize) * 3);
+    --cardHeight: calc(var(--imageSize) * 4);
+    --pad: calc(var(--imageSize) * 4);
+  }
+}
+
 
 html, body, #cards {
   display: flex;
@@ -40,10 +62,10 @@ html, body, #cards {
 
 .cardInner {
   position: relative;
-  margin: 25px;
+  margin: var(--cardMargin);
 
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
+  width: calc(100% - 2 * var(--cardMargin));
+  height: calc(100% - 2 * var(--cardMargin));
 }
 
 .midHolder {
@@ -135,7 +157,7 @@ html, body, #cards {
 /* Button overlay. */
 #buttons {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
 
   padding: 12px;
@@ -167,7 +189,7 @@ html, body, #cards {
 /* Options overlay. */
 #options {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
 
   padding: 12px;
@@ -187,4 +209,33 @@ html, body, #cards {
 
 #cardCount {
   padding-left: 10px;
+}
+
+#options ul {
+  margin: 4px 0;
+}
+
+
+/* Phone portrait override */
+@media only screen and (max-width: 480px) and (max-height: 1000px) and (orientation: portrait)  {
+  #cards {
+    position: relative;
+    top: 0;
+    height: 66%;
+  }
+
+  #options {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 480px) and (orientation: landscape) {
+  #cards {
+    position: relative;
+    left: 0;
+    width: 66%;
+  }
 }

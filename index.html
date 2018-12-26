@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
   <title>Halli Galli training</title>
   <link rel="stylesheet" href="./halligalli.css"></link>
   <script src="./halligalli.js"></script>
@@ -22,10 +26,9 @@
       <input id="nCards" type="range" value="4" min="2" max="6" onchange="updateNCards()"></input>
       <span id="cardCount"></span>
     </div>
-    <div><strong>Keys:</strong></div>
     <ul>
-      <li>Space: deal a card</li>
-      <li>Enter: hit the bell</li>
+      <li>Space/+: deal a card</li>
+      <li>Enter/5: hit the bell</li>
     </ul>
     <table>
       <tr><td>Correct</td><td id="nTP"></td></tr>
